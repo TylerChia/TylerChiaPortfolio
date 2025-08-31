@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GIS Work - Tyler Chia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Tyler Chia's Portfolio</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"> <i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="employment.html"> <i class="fa-solid fa-briefcase"></i> Employment</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html"> <i class="fas fa-project-diagram"></i> Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html"> <i class="fa-solid fa-flask"></i> Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="gis_work.html"> <i class="fa-solid fa-map"></i> GIS Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"> <i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Personal Projects</h2>
+    <p>Personal and academic projects displayed here. Click on each card to view the project.</p>
+    <hr style="border-color:#26a69a; margin:40px 0;">
+
+    <!-- Project Cards -->
+    <div class="row gy-3">
+
+        <!-- Trump Biden -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+              <!-- This invisible anchor makes the whole card clickable -->
+              <a href="/assets/documents/project_docs/trump_or_biden.html"
+                 target="_blank" rel="noopener noreferrer"
+                 class="stretched-link" aria-label="Open Hegarty Spatial Thinking Lab writeup"></a>
+          
+              <div class="row g-0 align-items-center">
+                <div class="col-md-8 content">
+                    <h4>Trump or Biden? (NLP Tweet Classifier) <i class="fab fa-python"></I></h4>
+                  <p>
+                    The goal of this project was to build a classifier that predicts whether a specific tweet was written by Donald Trump or Joe Biden.  The three classifiers that were used were a Naive Bayes Model, a Support Vector Machine, and a Logistic Regression.
+                  </p>
+                  <ul>
+                    <li>Naive Bayes: 95.125%</li>
+                    <li>Support Vector Machine: 96.375%</li>
+                    <li>Logistic Regression: 94.875%</li>
+                 </ul>
+                  <small class="text-muted">December 2021</small>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center">
+                  <img src="assets/images/project_imgs/trumpbiden.png"
+                       style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- COVID Forecast -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+              <!-- This invisible anchor makes the whole card clickable -->
+              <a href="assets/documents/project_docs/197A Final Paper copy.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 class="stretched-link" aria-label="Open Hegarty Spatial Thinking Lab writeup"></a>
+          
+              <div class="row g-0 align-items-center">
+                <div class="col-md-8 content">
+                    <h4>Forecasting Short-Term Future COVID-19 Cases <i class="fab fa-python"></I></h4>
+                  <h6>Goal:</h6>
+                  <ul>
+                    <li>Create two time-series forecasting models that predicts the number of new daily COVID cases in each county. </li>
+                    <li>Models were trained on the estimated percentage of outpatient doctor visits with confirmed COVID, outpatient doctor visits primarily about COVID-related symptoms, and new hospital admissions with COVID-associated diagnoses: all for 15 counties in California from May 1st, 2020 to November 1st, 2021. </li>
+                    <li>Created both an interpretable model in a decision tree regression model as well as a more complex model in a support vector regression model.</li>
+                 </ul>
+                 <h6>Conclusion:</h6>
+                 <ul>
+                    <li>Decision Tree Regressor testing RMSE was 908.86 and its R-squared value was approximately 0.57.</li>
+                    <li>Support Vector Regressor produced a testing RMSE of 1403.20 and an R-squared value of approximately -0.025.</li>
+                    <li>Neither model accurately predicted the number of new daily COVID cases per county using historical data due to wide range of values of the original dataset in addition to the features simply not being good predictors of new COVID cases.</li>
+                    <li>Decision tree performed much better than the SVR model as it was able to capture the overall trend in the rise and fall of new daily COVID cases.</li>
+                    <li>Link to poster
+                    <a href="assets/documents/project_docs/capstone poster copy.pdf" target="_blank" rel="noopener">here</a>.
+                    </li>
+                 </ul>
+                  <small class="text-muted">December 2021</small>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center">
+                  <img src="assets/images/project_imgs/projectposter.png"
+                       style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <!-- NBA Draft -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+              <!-- This invisible anchor makes the whole card clickable -->
+              <a href="https://tylerchia.github.io/nbadraft2021/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="stretched-link" aria-label="Open Hegarty Spatial Thinking Lab writeup"></a>
+          
+              <div class="row g-0 align-items-center">
+                <div class="col-md-8 content">
+                    <h4>Predicting The 2021 NBA Draft <i class="fab fa-r-project"></I></h4>
+                  <ul>
+                    <li>The goal of this project was to use preexisting data from the 2019 NBA draft in addition to NCAA college basketball statistics as a way to create the best classification model to predict whether or not a player would be chosen in the 2021 NBA draft.  I found that the best model out of the ones that I attempted was a logistic regression that used an optimal threshold.  This model had a 93% overall accuracy rate and an 80% true positive rate on the 40% test data split, which was the highest out of all the models considering the overall accuracy was not lowered too drastically.  On July 29th, I will come back to this project as a way to see how many of the 37 individuals that my model predicted to be drafted are actually drafted to the NBA.</li>
+                    <li>Edit (Post July 29, 2021):
+                        Out of the 37 players that my model predicted to be drafted, only 8 of them were actually drafted leaving us with a 21.6% accuracy rate.  With that being said, there 10 players who I predicted to be drafted who went undrafted but eventually signed with NBA G-League teams or are currently on an NBA roster.  Many of the players that I predicted to be drafted actually ended up not even entering the draft and stayed at their respective schools.  In the datatable, I have highlighted the players that were officially drafted by NBA teams in the 2021 draft.</li>
+                 </ul>
+                  <small class="text-muted">July 2021</small>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center">
+                  <img src="assets/images/project_imgs/draft.png"
+                       style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+              </div>
+            </div>
+        </div>
+
+        
+        <!-- Election -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+              <!-- This invisible anchor makes the whole card clickable -->
+              <a href="https://tylerchia.github.io/2016Election/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="stretched-link" aria-label="Open Hegarty Spatial Thinking Lab writeup"></a>
+          
+              <div class="row g-0 align-items-center">
+                <div class="col-md-7 content">
+                    <h4>Predicting the 2016 Presidential Election Using Demographic Data <i class="fab fa-r-project"></I></h4>
+                    <h6>Goal #1: Predicting whether or not Donald Trump would win a specific county </h6>
+                    <ul>
+                        <li>
+                            Linear Regression: 0.09 RMSE / Predicted Trump would win 548/613 counties in the test dataset which is 21 more than he actually won. 
+                        </li>
+                        <li>Logistic Regression: 91.4% Accuracy</li>
+                        <li>Random Forest: 92.2% Accuracy</li>
+                        <li>Adaptive Boosting: 92% Accuracy.</li>
+                    </ul>
+                    <h6>Goal #2: Use K-Means clustering to cluster our data and see if there were any distinct groups driven by specific demographic variables</h6>
+                    <ul>
+                        <li>
+                            Top two clusters that had the highest percentage of counties vote for Trump, were also predominantly white and wealthy. 
+                        </li>
+                        <li>The cluster with the lowest percentage of counties that voted for Trump was driven by a higher population of minorities and individuals with lower income per capita.</li>
+                    </ul>
+                  <small class="text-muted">April 2021</small>
+                </div>
+                <div class="col-md-5 text-center d-flex align-items-center">
+                  <img src="assets/images/project_imgs/clustering.png"
+                       style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <!-- Disney -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+              <!-- This invisible anchor makes the whole card clickable -->
+              <a href="https://tylerchia.github.io/disneyworld_ticket_elasticity/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="stretched-link" aria-label="Open Hegarty Spatial Thinking Lab writeup"></a>
+          
+              <div class="row g-0 align-items-center">
+                <div class="col-md-8 content">
+                    <h4>Evaluating Disney's Pricing Model <i class="fab fa-r-project"></I></h4>
+                  <p>
+                    Simple data analysis project done in order to calculate the price elasticity of demand for Disney World single day passes over the past decade using attendance records and average prices.  Doing this allowed me to make conclusions about Disney's pricing strategy relating to their theme parks.
+                  </p>
+                  <small class="text-muted">December 2020</small>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center">
+                  <img src="assets/images/project_imgs/disneyattendance.png"
+                       style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <!-- Spotify -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+              <!-- This invisible anchor makes the whole card clickable -->
+              <a href="https://tylerchia.github.io/dsclub-spotify-recommender/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="stretched-link" aria-label="Open Hegarty Spatial Thinking Lab writeup"></a>
+          
+              <div class="row g-0 align-items-center">
+                <div class="col-md-8 content">
+                    <h4>Spotify Recommender: Ordering Playlists <i class="fab fa-r-project"></I> <i class="fab fa-python"></I></h4>
+                  <p>
+                    UCSB Data Science Club Project.  Through this project, my group and I wanted to see if we could order a Spotify playlist based on similarity to another playlist.  In order to do this, we got numerical data from our Spotify playlists and calculated the error between the numerical values of songs from the second playlist and the average, median, and mode values from the first.  This allowed us to make predictions as to which songs were most similar to the playlist.  
+                  </p>
+                  <small class="text-muted">November 2020</small>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center">
+                  <img src="assets/images/project_imgs/histogram1.png"
+                       style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <!-- Solar Panel -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+              <!-- This invisible anchor makes the whole card clickable -->
+              <a href="https://tylerchia.github.io/Solar-Panel-Proposal/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="stretched-link" aria-label="Open Hegarty Spatial Thinking Lab writeup"></a>
+          
+              <div class="row g-0 align-items-center">
+                <div class="col-md-8 content">
+                    <h4>Mitigation Strategy Proposal: Solar Panels <i class="fab fa-r-project"></I></h4>
+                  <p>
+                    Honors Contract Project.  In this project, using a combination of data science methods and thorough research, I proposed a mitigation strategy that requires certain homeowners, based on the purchase price of their house, to install solar panels as a way of reducing carbon emissions.
+                  </p>
+                  <small class="text-muted">October 2020</small>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center">
+                  <img src="assets/images/project_imgs/solarpanel.png"
+                       style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- UC Datathon -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+              <!-- This invisible anchor makes the whole card clickable -->
+              <a href="https://deepnote.com/workspace/joanne%20kim-4da6587a-415c-4db6-b2c0-47c2fa6de0e1/project/Loadshedding-Project-f31d9b1e-b811-4010-8d3e-ce8e17f35adb/notebook/datathonproject-48af38a70ffe43bfb8943191dadb7c11?utm_content=f31d9b1e-b811-4010-8d3e-ce8e17f35adb"
+                 target="_blank" rel="noopener noreferrer"
+                 class="stretched-link" aria-label="Open Hegarty Spatial Thinking Lab writeup"></a>
+          
+              <div class="row g-0 align-items-center">
+                <div class="col-md-8 content">
+                    <h4>UC x Imagine Datathon Project <i class="fab fa-python"></I></h4>
+                  <p>
+                    Right before Fall quarter 2020, I participated in a Datathon hosted by the UC system and ImagineScholar.  The goal of this project was to analyze and visualize data about energy and load shedding in South Africa.  My partner and I decided to see if there is a correlation between instances of load shedding and international/foreign investment to see if load shedding was impacting the economy.
+                  </p>
+                  <small class="text-muted">August 2020</small>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center">
+                  <img src="assets/images/project_imgs/datathon.png"
+                       style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+              </div>
+            </div>
+        </div>
+
+<hr style="border-color:#26a69a; margin:40px 0;">
+
+</body>
+</html>

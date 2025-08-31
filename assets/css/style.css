@@ -89,3 +89,60 @@ li a:hover {
     color: #1de9b6 !important;
 }
 
+/* Keep normal text color inside cards even when card is clickable */
+.card { color: #e0f2f1; }
+
+/* Teal link styling only for inline content links */
+.content a:link,
+.content a:visited { 
+  color: #00bfa5; 
+  text-decoration: underline; 
+}
+.content a:hover,
+.content a:active { 
+  color: #1de9b6; 
+}
+
+.card a:not(.stretched-link) {
+    position: relative;
+    z-index: 1;
+}
+
+.tech-section {
+    text-align: center; /* centers the heading and the icon row */
+    margin-bottom: 40px;
+  }
+  
+  .tech-title {
+    margin-bottom: 15px;
+  }
+  
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centers the icons under the title */
+    gap: 12px;
+  }
+  
+  .tech-icon {
+    width: 60px; 
+    height: 60px;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: 6px;
+  }
+  
+  .tech-icon i { 
+    font-size: 42px;
+    line-height: 1;
+  }
+  
+  .tech-icon img { 
+    max-height: 40px;  
+    width: auto; 
+    display: block; 
+  }
+  
+  
+
