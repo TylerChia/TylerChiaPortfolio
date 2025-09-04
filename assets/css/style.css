@@ -144,11 +144,13 @@ li a:hover {
     display: block; 
   }
 
-  /* Graduation photos (desktop + mobile) */
+
+/* Graduation photos (desktop + mobile) */
 .grad-photo {
-    max-height: 450px;  /* consistent cap on desktop */
-    width: 100%;        /* take up container width */
+    max-height: 450px;   /* consistent cap on desktop */
+    width: 100%;         /* take up container width */
     object-fit: contain; /* keep proportions, no stretching */
+    border-radius: 8px;  /* always rounded */
 }
 
 /* Degree thumbnails (desktop + mobile) */
@@ -156,29 +158,31 @@ li a:hover {
     max-height: 220px;   /* consistent cap on desktop */
     width: 100%;         /* fill available width */
     object-fit: contain; /* no stretching */
+    border-radius: 8px;  /* always rounded */
 }
-  
+
+/* Mobile adjustments */
 @media (max-width: 767px) {
     .card img {
       max-height: 180px;   /* shrink images on mobile */
-      width: 100%;         /* fill container */
-      object-fit: contain; /* keep aspect ratio without stretching */
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .grad-photo {
+      max-height: 300px;  /* smaller cap on mobile */
+    }
+
+    .degree-photo {
+      max-height: 150px;  /* smaller cap on mobile */
     }
 }
-/* Graduation photos */
-@media (max-width: 767px) {
-    .grad-photo {
-      max-height: 300px;
-      width: 100%;
-      object-fit: contain;
-    }
-  
-    /* Degree thumbnails */
-    .degree-photo {
-      max-height: 150px;
-      width: 100%;
-      object-fit: contain;
-    }
+
+.grad-photo,
+.degree-photo {
+  border-radius: 12px !important; /* bigger than Bootstrap's default */
+  overflow: hidden;               /* clip corners */
+  display: block;                 /* prevent inline weirdness */
 }
 
 @media (max-width: 767px) {
