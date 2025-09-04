@@ -154,7 +154,7 @@ li a:hover {
 /* Mobile tweak */
 @media (max-width: 767px) {
     .grad-photo {
-      max-height: 250px; /* smaller cap for phones */
+      max-height: 350px; /* smaller cap for phones */
     }
 }
   
