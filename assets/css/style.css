@@ -143,6 +143,14 @@ li a:hover {
     width: auto; 
     display: block; 
   }
+
+  @media (max-width: 767px) {
+    .card img {
+      max-height: 180px;   /* shrink images on mobile */
+      width: 100%;         /* fill container */
+      object-fit: contain; /* keep aspect ratio without stretching */
+    }
+}
   
   
 
