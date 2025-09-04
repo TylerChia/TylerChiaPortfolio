@@ -157,15 +157,5 @@ li a:hover {
     z-index: 5; /* higher than stretched-link */
 }
 
-.home-img {
-    max-height: 450px;
-    width: "auto";
-    object-fit: cover; /* maintain aspect ratio */
-}
 
-.degree-img {
-    max-height: 220px;
-    width: "auto";
-    object-fit: cover; /* maintain aspect ratio */
-}
 
