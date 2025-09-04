@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GIS Work - Tyler Chia</title>
+    <title>Employment - Tyler Chia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -33,136 +33,386 @@
 
     <h3 class="mb-3">ML Engineer: Reyes Coca Cola Bottling</h3>
     <div class="row gy-3">
-        <!-- Card 1 -->
+        <!-- Merch Routing -->
         <div class="col-12">
-            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
-                <a href=""
-                target="_blank" rel="noopener noreferrer"
-                class="stretched-link"></a>
-                <div class="row g-0 align-items-center">
+            <div class="card p-3 position-relative project-card" style="margin-bottom:20px;">
+            <!-- Internal project badge -->
+            <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+        
+            <div class="row g-0 align-items-center">
                 <div class="col-md-7 content">
-                    <h4>Fraud Classification <i class="fab fa-python"></I></h4>
-                    <p>
-                        As a data science fellow for the Central Coast Data Science Partnership, during my winter and spring quarters of my fourth year at UCSB, I was tasked with working with sponsoring company, Carpe Data, in building an insurance fraud classifying model.
-                    </p>
-                    <ul>
-                    <li>Carpe Data is an insurance technology company whose headquarters is located in Santa Barbara, California. Carpe Data gathers and analyzes data from sources such as social media platforms and web content in order to provide insurance companies with data solutions. Insurance companies typically receive a significant amount of claims each year; Carpe Data helps to reduce the amount of manual inspection needed to verify these claims through the use of their algorithms.</li>
-                    <li>Our capstone team’s project focuses on building machine learning models in Python that predict whether or not a web page contains evidence about a fraud claim and provide information about the specific type of fraudulent activity that is present.</li>
-                    <li>Project poster can be seen <a href="assets/documents/employment_docs/carpedata_poster.pdf" target="_blank">here</a></li>
-                    </ul>
-                    <small class="text-muted">Spring 2022</small>
+                <h4> Merchandiser Routing App <i class="fab fa-python"></i></h4>
+                <p>
+                    <strong>Business Problem:</strong> Merchandisers travel to stores to ensure delivered products reach shelves. Routing was manual and did not account for stocking time per store or drive times, leading to inefficiencies.  
+                </p>
+                
+                <p>
+                    <strong>Solution:</strong> Developed a web app for building optimized routes from scratch. The tool displays nearby stores using ESRI’s distance matrix and calculates total route time by combining drive time with in-store stocking time. An ML model estimates stocking time based on factors like delivery volume, product mix, day of week, and visit frequency.  
+                </p>
+                
+                <p>
+                    <strong>Value Added:</strong> Reduced manual rerouting effort by 70% and improved efficiency of merchandiser scheduling.  
+                </p>
+                <small class="text-muted">Summer 2025</small>
                 </div>
                 <div class="col-md-5 text-center d-flex align-items-center">
-                    <img src="assets/images/employment_imgs/capstone_poster.png"
-                        style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                <img src="assets/images/employment_imgs/merch_routing.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Nielsen Category Forecasting -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+                <div class="row g-0 align-items-center">
+                <div class="col-md-7 content">
+                    <h4> Nielsen Category Forecasting <i class="fab fa-python"></I></h4>
+                    <p>
+                    <strong>Business Problem:</strong> While we already forecast our own internal sales, we lacked visibility into total category trends including competitor products. 
+                    Understanding category growth (e.g., health/nutrition drinks) is critical for making informed negotiations on shelf and display space.  
+                    </p>
+                    
+                    <p>
+                    <strong>Solution:</strong> Evaluated multiple forecasting approaches and selected Facebook Prophet for its speed and retraining efficiency. 
+                    Trained over 4,000 models using Nielsen data to produce 26-week forecasts by category and key account. 
+                    Deployed via Docker and Azure Container Registry with an automated pipeline that ingests new data weekly, detects model drift, and retrains as needed. 
+                    Results are stored in Snowflake and visualized through a PyShiny web app with accuracy metrics and interactive category/account selection.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Provides the space team with robust market insights for shelf negotiations. 
+                    For example, at Stater Bros (168 outlets), forecasts demonstrated stronger SSD (sparkling soft drink) trends, which helped secure commitments to maintain or increase SSD shelf space during major remodels.  
+                    </p>
+                    
+                    <p>
+                    <em>User Feedback:</em>  
+                    “This achievement would not have been possible without the dedication and expertise of our data science team and Tyler’s outstanding contributions. 
+                    Their work not only influenced one of our largest accounts but also set a precedent for how we can use analytics to drive strategic outcomes.”  
+                    </p>
+                    <small class="text-muted">Summer 2025</small>
+                </div>
+                <div class="col-md-5 text-center d-flex align-items-center">
+                    <img src="assets/images/employment_imgs/nielsen_forecasting.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
                 </div>
                 </div>
             </div>
         </div>
 
-        <!-- Card 1 -->
+        <!-- ASRS Dashboard -->
         <div class="col-12">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
-                <a href=""
-                target="_blank" rel="noopener noreferrer"
-                class="stretched-link"></a>
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
                 <div class="row g-0 align-items-center">
                 <div class="col-md-7 content">
-                    <h4>Fraud Classification <i class="fab fa-python"></I></h4>
+                    <h4> ASRS Dashboard <i class="fab fa-python"></I></h4>
                     <p>
-                        As a data science fellow for the Central Coast Data Science Partnership, during my winter and spring quarters of my fourth year at UCSB, I was tasked with working with sponsoring company, Carpe Data, in building an insurance fraud classifying model.
+                    <strong>Business Problem:</strong> A facility with an Automated Storage and Retrieval System (ASRS) lacked visibility into what was stored, upcoming expirations, and category-level capacity needs, making it difficult to plan production effectively.  
                     </p>
-                    <ul>
-                    <li>Carpe Data is an insurance technology company whose headquarters is located in Santa Barbara, California. Carpe Data gathers and analyzes data from sources such as social media platforms and web content in order to provide insurance companies with data solutions. Insurance companies typically receive a significant amount of claims each year; Carpe Data helps to reduce the amount of manual inspection needed to verify these claims through the use of their algorithms.</li>
-                    <li>Our capstone team’s project focuses on building machine learning models in Python that predict whether or not a web page contains evidence about a fraud claim and provide information about the specific type of fraudulent activity that is present.</li>
-                    <li>Project poster can be seen <a href="assets/documents/employment_docs/carpedata_poster.pdf" target="_blank">here</a></li>
-                    </ul>
-                    <small class="text-muted">Spring 2022</small>
+                    
+                    <p>
+                    <strong>Solution:</strong> Built a web app that ingests Excel exports from the ASRS system and visualizes storage capacity, highlights low/high inventory products, and flags items nearing expiration.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Enabled the production team to make proactive, data-driven decisions on what to produce next, improving efficiency and reducing waste.  
+                    </p>
+                    <small class="text-muted">Spring 2025</small>
                 </div>
                 <div class="col-md-5 text-center d-flex align-items-center">
-                    <img src="assets/images/employment_imgs/capstone_poster.png"
-                        style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                    <img src="assets/images/employment_imgs/asrs.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
                 </div>
                 </div>
             </div>
         </div>
 
-        <!-- Card 1 -->
+        <!-- Reactive Tech Planning -->
         <div class="col-12">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
-                <a href=""
-                target="_blank" rel="noopener noreferrer"
-                class="stretched-link"></a>
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
                 <div class="row g-0 align-items-center">
                 <div class="col-md-7 content">
-                    <h4>Fraud Classification <i class="fab fa-python"></I></h4>
+                    <h4> Reactive Technician Planning <i class="fab fa-python"></I></h4>
                     <p>
-                        As a data science fellow for the Central Coast Data Science Partnership, during my winter and spring quarters of my fourth year at UCSB, I was tasked with working with sponsoring company, Carpe Data, in building an insurance fraud classifying model.
+                    <strong>Business Problem:</strong> Field technicians often spend excessive time idle while waiting for service calls (e.g., coolers, Freestyle machines). 
+                    We needed a way to forecast weekly maintenance requests to better schedule staffing and reduce downtime.  
                     </p>
-                    <ul>
-                    <li>Carpe Data is an insurance technology company whose headquarters is located in Santa Barbara, California. Carpe Data gathers and analyzes data from sources such as social media platforms and web content in order to provide insurance companies with data solutions. Insurance companies typically receive a significant amount of claims each year; Carpe Data helps to reduce the amount of manual inspection needed to verify these claims through the use of their algorithms.</li>
-                    <li>Our capstone team’s project focuses on building machine learning models in Python that predict whether or not a web page contains evidence about a fraud claim and provide information about the specific type of fraudulent activity that is present.</li>
-                    <li>Project poster can be seen <a href="assets/documents/employment_docs/carpedata_poster.pdf" target="_blank">here</a></li>
-                    </ul>
-                    <small class="text-muted">Spring 2022</small>
+                    
+                    <p>
+                    <strong>Solution:</strong> Built a series of LSTM models in TensorFlow, each predicting one additional day ahead, to generate a full 7-day forecast. 
+                    Models run every Sunday, with results visualized through a PyShiny web app for easy planning.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Proof of concept at the Los Angeles distribution center demonstrated potential to reduce technician idle time and labor costs. 
+                    Deployment across the company is in progress.  
+                    </p>
+                    <small class="text-muted">Winter 2024</small>
                 </div>
                 <div class="col-md-5 text-center d-flex align-items-center">
-                    <img src="assets/images/employment_imgs/capstone_poster.png"
-                        style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                    <img src="assets/images/employment_imgs/reactive_tech.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
                 </div>
                 </div>
             </div>
         </div>
 
-        <!-- Card 1 -->
+        <!-- Dock Door Analysis -->
         <div class="col-12">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
-                <a href=""
-                target="_blank" rel="noopener noreferrer"
-                class="stretched-link"></a>
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
                 <div class="row g-0 align-items-center">
                 <div class="col-md-7 content">
-                    <h4>Fraud Classification <i class="fab fa-python"></I></h4>
+                    <h4>Dock Door Optimization App <i class="fab fa-python"></I></h4>
                     <p>
-                        As a data science fellow for the Central Coast Data Science Partnership, during my winter and spring quarters of my fourth year at UCSB, I was tasked with working with sponsoring company, Carpe Data, in building an insurance fraud classifying model.
+                    <strong>Business Problem:</strong> Warehouse supervisors were manually assigning delivery routes to dock doors, often arbitrarily. In large facilities, poor assignments could add hundreds of feet of unnecessary travel for pallet jacks, increasing inefficiency and equipment wear.  
                     </p>
-                    <ul>
-                    <li>Carpe Data is an insurance technology company whose headquarters is located in Santa Barbara, California. Carpe Data gathers and analyzes data from sources such as social media platforms and web content in order to provide insurance companies with data solutions. Insurance companies typically receive a significant amount of claims each year; Carpe Data helps to reduce the amount of manual inspection needed to verify these claims through the use of their algorithms.</li>
-                    <li>Our capstone team’s project focuses on building machine learning models in Python that predict whether or not a web page contains evidence about a fraud claim and provide information about the specific type of fraudulent activity that is present.</li>
-                    <li>Project poster can be seen <a href="assets/documents/employment_docs/carpedata_poster.pdf" target="_blank">here</a></li>
-                    </ul>
-                    <small class="text-muted">Spring 2022</small>
+                    
+                    <p>
+                    <strong>Solution:</strong> Built an optimization algorithm that combines distances from pick floor aisles to dock doors with order details to recommend the most efficient dock door assignments. Delivered via a web app that enables real-time, daily optimization of truck-to-door assignments.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Piloted at the Milwaukee facility, reducing travel distance for pallet jacks, improving efficiency, and extending equipment longevity.  
+                    </p>
+                    <small class="text-muted">Fall 2024</small>
                 </div>
                 <div class="col-md-5 text-center d-flex align-items-center">
-                    <img src="assets/images/employment_imgs/capstone_poster.png"
-                        style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                    <img src="assets/images/employment_imgs/dock_doors.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
                 </div>
                 </div>
             </div>
         </div>
 
-        <!-- Card 1 -->
+        <!-- Image Rec Coaching -->
         <div class="col-12">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
-                <a href=""
-                target="_blank" rel="noopener noreferrer"
-                class="stretched-link"></a>
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+                <div class="row g-0 align-items-center">
+                <div class="col-md-8 content">
+                    <h4> Image Rec Coaching Tool <i class="fab fa-python"></I></h4>
+                    <p>
+                    <strong>Business Problem:</strong> Sales reps capture over 200k display photos monthly, which are sent to Maxerience for product recognition. Poor-quality images (angled, compressed, blurry) reduce accuracy, leading to unreliable display data.  
+                    </p>
+                    
+                    <p>
+                    <strong>Solution:</strong> Fine-tuned a vision transformer to classify images as "good," "angled," or "compressed." Deployed a pipeline scoring 8–15k images daily, with results fed into a dashboard linking low-quality photos to specific reps. Managers use this to coach reps, and incentives reward territories with high-quality images.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Significantly improves accuracy of display recognition, ensuring more reliable insights for sales and merchandising.  
+                    </p>
+                    <small class="text-muted">Summer 2024</small>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center">
+                    <img src="assets/images/employment_imgs/maxerience_coaching.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Home Page-->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
                 <div class="row g-0 align-items-center">
                 <div class="col-md-7 content">
-                    <h4>Fraud Classification <i class="fab fa-python"></I></h4>
+                    <h4>Data Science Team Homepage <i class="fab fa-python"></I></h4>
                     <p>
-                        As a data science fellow for the Central Coast Data Science Partnership, during my winter and spring quarters of my fourth year at UCSB, I was tasked with working with sponsoring company, Carpe Data, in building an insurance fraud classifying model.
+                    <strong>Business Problem:</strong> As a legacy industry, many employees lacked awareness of the data science team’s capabilities, limiting effective collaboration and meaningful project requests.  
                     </p>
-                    <ul>
-                    <li>Carpe Data is an insurance technology company whose headquarters is located in Santa Barbara, California. Carpe Data gathers and analyzes data from sources such as social media platforms and web content in order to provide insurance companies with data solutions. Insurance companies typically receive a significant amount of claims each year; Carpe Data helps to reduce the amount of manual inspection needed to verify these claims through the use of their algorithms.</li>
-                    <li>Our capstone team’s project focuses on building machine learning models in Python that predict whether or not a web page contains evidence about a fraud claim and provide information about the specific type of fraudulent activity that is present.</li>
-                    <li>Project poster can be seen <a href="assets/documents/employment_docs/carpedata_poster.pdf" target="_blank">here</a></li>
-                    </ul>
-                    <small class="text-muted">Spring 2022</small>
+                    
+                    <p>
+                    <strong>Solution:</strong> Created a web application showcasing our mission statement and highlighting completed projects to demonstrate the team’s value and expertise.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Increased visibility of the data science team’s impact and fostered stronger engagement across the organization.  
+                    </p>      
+                    <small class="text-muted">Fall 2023</small>
                 </div>
                 <div class="col-md-5 text-center d-flex align-items-center">
-                    <img src="assets/images/employment_imgs/capstone_poster.png"
-                        style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                    <img src="assets/images/employment_imgs/homepage.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Credit Limit Analysis-->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+                <div class="row g-0 align-items-center">
+                <div class="col-md-7 content">
+                    <h4>Credit Limit Analysis <i class="fab fa-python"></I></h4>
+                    <p>
+                    <strong>Business Problem:</strong> Company credit card limits were inconsistent, with too many unique tiers. This created unnecessary liability while making it difficult to standardize limits without reducing employee flexibility.  
+                    </p>
+                    
+                    <p>
+                    <strong>Solution:</strong> Applied unsupervised machine learning to define 10 optimal credit limit tiers based on max monthly spend (+20% buffer). Developed a process to assign new card limits by matching employee attributes (e.g., department, location, direct reports) to similar employees, then using their average spend to determine the appropriate tier. Successfully scaled the same approach for a sister company (Reyes Beverage Group).  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Reduced decision time for assigning new card limits, standardized tiers, and cut monthly liability by $1.49M with zero limit extensions. At Reyes Beverage Group, achieved an additional $914K reduction in liability.  
+                    </p>      
+                    <small class="text-muted">Fall 2023</small>
+                </div>
+                <div class="col-md-5 text-center d-flex align-items-center">
+                    <img src="assets/images/employment_imgs/credit_limit.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Holiday Planning-->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+                <div class="row g-0 align-items-center">
+                <div class="col-md-7 content">
+                    <h4>Holiday Planning <i class="fab fa-python"></I></h4>
+                    <p>
+                    <strong>Business Problem:</strong> Holiday weeks reduce the number of delivery days, forcing planners to manually shift and cut delivery stops, a time-consuming and stressful process.  
+                    </p>
+                    
+                    <p>
+                    <strong>Solution:</strong> Built a data-driven recommendation engine that automates the first pass of delivery cuts and schedule shifts during 4-day work weeks.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Saved ~2,300 hours of manual planning annually and improved decision quality by making cuts fully data-driven.  
+                    </p>         
+                    <small class="text-muted">Summer 2023</small>
+                </div>
+                <div class="col-md-5 text-center d-flex align-items-center">
+                    <img src="assets/images/employment_imgs/holiday_planning.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF Processing-->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+                <div class="row g-0 align-items-center">
+                <div class="col-md-7 content">
+                    <h4>PDF POG Data Scraping <i class="fab fa-python"></I></h4>
+                    <p>
+                    <strong>Business Problem:</strong> The space team receives 800+ Walmart PDF planograms annually, each with shelf diagrams and supporting data. Extracting this information manually or with third-party tools was slow and still required significant cleanup.  
+                    </p>
+                    
+                    <p>
+                    <strong>Solution:</strong> Developed a Flask-based tool that processes a folder of PDFs and outputs the extracted data into ready-to-use Excel files compatible with the team’s software.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Automated data extraction saved the team 1,600+ hours annually, freeing time for higher-value analysis of display configurations.  
+                    </p>                
+                    <small class="text-muted">Spring 2023</small>
+                </div>
+                <div class="col-md-5 text-center d-flex align-items-center">
+                    <img src="assets/images/employment_imgs/pdf_walmart.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Warehouse Slotting-->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+                <div class="row g-0 align-items-center">
+                <div class="col-md-6 content">
+                    <h4>Warehouse Slotting <i class="fab fa-python"></I></h4>
+                    <p>
+                    <p>
+                    <strong>Business Problem:</strong> How can we optimize product placement on the warehouse pick floor while accounting for building constraints, pick flow, volume, stability, and allergens?  
+                    </p>
+                    
+                    <p>
+                    <strong>Solution:</strong> Designed a custom algorithm leveraging market basket analysis (Apriori) combined with operational constraints. Delivered as a Streamlit web app that accepts a building layout as input and generates an optimized pick floor arrangement.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Reduced layout creation time by 4–5x compared to manual methods. Achieved 5–15% improvement in Cases Per Hour, along with fewer out-of-stocks and reduced product breakage.  
+                    </p>           
+                    <small class="text-muted">Winter 2022</small>
+                </div>
+                <div class="col-md-6 text-center d-flex align-items-center">
+                    <img src="assets/images/employment_imgs/slotting.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <!-- Data Science Intern: Reyes Coca Cola Bottling -->
+    <h3 class="mt-5 mb-3">Data Science Intern: Reyes Coca Cola Bottling</h3>
+    <div class="row gy-3">
+        <!-- Survey Routing-->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+                <div class="row g-0 align-items-center">
+                <div class="col-md-7 content">
+                    <h4>Surveyor Routing <i class="fab fa-python"></I></h4>
+                    <p>
+                    <strong>Business Problem:</strong> Surveyors are employees that are tasked with going to stores and taking images of products on shelves and in coolers to ensure the right products are on display. How can we route them in an efficient manner?
+                    </p>
+                    <p>
+                    <strong>Solution:</strong> Implemented an agglomerative clustering algorithm along with business logic to create optimal driving routes. Finished product in the form of an Alteryx workflow handed off to the sales ops team.
+                    </p>
+                    <p>
+                    <strong>Value Added:</strong> Saved sales operations team 20 hours of manual route building labor every month.
+                    </p>                      
+                    <small class="text-muted">Fall 2022</small>
+                </div>
+                <div class="col-md-5 text-center d-flex align-items-center">
+                    <img src="assets/images/employment_imgs/survey_routing.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FSOP Cust Seg -->
+        <div class="col-12">
+            <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+                <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Internal Project</span>
+                <div class="row g-0 align-items-center">
+                <div class="col-md-7 content">
+                    <h4>FSOP Customer Segmentation <i class="fab fa-python"></I></h4>
+                    <p>
+                    <strong>Business Problem:</strong> FSOP (Food Service on Premise) customers such as hospitals, universities, and quick-service restaurants—vary in profitability. We knew revenue and costs, but needed to understand <em>what makes a customer profitable</em> and how to group them effectively. 
+                    </p>
+                    
+                    <p>
+                    <strong>Solution:</strong> Applied K-means clustering on customer characteristics. Found profitability was strongly tied to product mix. For example, hospitals tended to order high volumes of sports drinks (Powerade, Bodyarmor), which carry higher margins. Results were visualized in a Power BI dashboard.  
+                    </p>
+                    
+                    <p>
+                    <strong>Value Added:</strong> Gave account managers clearer insight into customer behavior guiding product mix and shelf space negotiations. Provided the data science team with new feature for future models.  
+                    </p>                      
+                    <small class="text-muted">Summer 2022</small>
+                </div>
+                <div class="col-md-5 text-center d-flex align-items-center">
+                    <img src="assets/images/employment_imgs/cust_seg.jpg"
+                    style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
                 </div>
                 </div>
             </div>
