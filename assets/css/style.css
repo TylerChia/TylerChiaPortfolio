@@ -150,12 +150,12 @@ li a:hover {
     width: 100%;        /* take up container width */
     object-fit: contain; /* keep proportions, no stretching */
 }
-  
-/* Mobile tweak */
-@media (max-width: 767px) {
-    .grad-photo {
-      max-height: 350px; /* smaller cap for phones */
-    }
+
+/* Degree thumbnails (desktop + mobile) */
+.degree-photo {
+    max-height: 220px;   /* consistent cap on desktop */
+    width: 100%;         /* fill available width */
+    object-fit: contain; /* no stretching */
 }
   
 @media (max-width: 767px) {
@@ -165,9 +165,17 @@ li a:hover {
       object-fit: contain; /* keep aspect ratio without stretching */
     }
 }
+/* Graduation photos */
 @media (max-width: 767px) {
-    .education-section img {
-      max-height: 250px;
+    .grad-photo {
+      max-height: 300px;
+      width: 100%;
+      object-fit: contain;
+    }
+  
+    /* Degree thumbnails */
+    .degree-photo {
+      max-height: 150px;
       width: 100%;
       object-fit: contain;
     }
