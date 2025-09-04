@@ -144,11 +144,47 @@ li a:hover {
     display: block; 
   }
 
-  @media (max-width: 767px) {
+  /* Graduation photos (desktop + mobile) */
+.grad-photo {
+    max-height: 450px;  /* consistent cap on desktop */
+    width: 100%;        /* take up container width */
+    object-fit: contain; /* keep proportions, no stretching */
+}
+  
+/* Mobile tweak */
+@media (max-width: 767px) {
+    .grad-photo {
+      max-height: 250px; /* smaller cap for phones */
+    }
+}
+  
+@media (max-width: 767px) {
     .card img {
       max-height: 180px;   /* shrink images on mobile */
       width: 100%;         /* fill container */
       object-fit: contain; /* keep aspect ratio without stretching */
+    }
+}
+@media (max-width: 767px) {
+    .education-section img {
+      max-height: 250px;
+      width: 100%;
+      object-fit: contain;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+      font-size: 2.2rem;   /* more reasonable for mobile */
+    }
+  
+    h3 {
+      font-size: 1.5rem;   /* slightly smaller */
+    }
+  
+    p.lead {
+      font-size: 1rem;     /* shrink long intro paragraph */
+      line-height: 1.4;
     }
 }
 
