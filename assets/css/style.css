@@ -1,4 +1,3 @@
-/* Global Theme */
 body {
     background-color: #0d1b1e; /* deep teal background */
     color: #e0f2f1; /* light teal text */
@@ -11,9 +10,9 @@ html, body {
     height: 100%;
     margin: 0;
     background-color: #0d1b1e; /* dark teal */
-    cursor: default;            /* don’t hide it, or use none if you want only effect */
+    cursor: default;            /* don't hide it, or use none if you want only effect */
     overflow-x: hidden;         /* prevent clipping particles */
-  }
+}
 
 /* Navbar */
 .navbar {
@@ -59,13 +58,12 @@ a:hover, .nav-link:hover {
     color: #4dd0e1 !important;
 }
 
-
 #typed-output {
     font-size: 1.5rem;
     border-right: 2px solid #00bfa5;
     padding-right: 5px;
     white-space: nowrap;
-  }
+}
 
 /* Make bullet points visible on dark background */
 ul li {
@@ -80,7 +78,7 @@ ul li {
 ul {
     padding-left: 20px;
 }
-  
+
 li a {
     color: #00bfa5 !important;   /* force only bullet-point links to be teal */
     text-decoration: underline;
@@ -95,12 +93,12 @@ li a:hover {
 /* Teal link styling only for inline content links */
 .content a:link,
 .content a:visited { 
-  color: #00bfa5; 
-  text-decoration: underline; 
+    color: #00bfa5; 
+    text-decoration: underline; 
 }
 .content a:hover,
 .content a:active { 
-  color: #1de9b6; 
+    color: #1de9b6; 
 }
 
 .card a:not(.stretched-link) {
@@ -111,92 +109,90 @@ li a:hover {
 .tech-section {
     text-align: center; /* centers the heading and the icon row */
     margin-bottom: 40px;
-  }
-  
-  .tech-title {
+}
+
+.tech-title {
     margin-bottom: 15px;
-  }
-  
-  .tech-icons {
+}
+
+.tech-icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* centers the icons under the title */
     gap: 12px;
-  }
-  
-  .tech-icon {
+}
+
+.tech-icon {
     width: 60px; 
     height: 60px;
     display: inline-flex; 
     align-items: center; 
     justify-content: center;
     margin: 6px;
-  }
-  
-  .tech-icon i { 
+}
+
+.tech-icon i { 
     font-size: 42px;
     line-height: 1;
-  }
-  
-  .tech-icon img { 
+}
+
+.tech-icon img { 
     max-height: 40px;  
     width: auto; 
     display: block; 
-  }
+}
 
+/* FIXED: Image rounding issue */
+/* Add container with overflow hidden to enforce rounding */
+.image-container {
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
 
 /* Graduation photos (desktop + mobile) */
 .grad-photo {
     max-height: 450px;   /* consistent cap on desktop */
-    width: 100%;         /* take up container width */
+    width: "auto";         /* take up container width */
     object-fit: contain; /* keep proportions, no stretching */
-    border-radius: 8px;  /* always rounded */
+    border-radius: 20px !important;  /* always rounded - added !important */
 }
 
 /* Degree thumbnails (desktop + mobile) */
 .degree-photo {
     max-height: 220px;   /* consistent cap on desktop */
-    width: 100%;         /* fill available width */
+    width: "auto";         /* fill available width */
     object-fit: contain; /* no stretching */
-    border-radius: 8px;  /* always rounded */
+    border-radius: 20px !important;  /* always rounded - added !important */
 }
 
 /* Mobile adjustments */
 @media (max-width: 767px) {
     .card img {
-      max-height: 180px;   /* shrink images on mobile */
-      width: 100%;
-      object-fit: contain;
+        max-height: 180px;   /* shrink images on mobile */
+        width: 100%;
+        object-fit: contain;
     }
 
     .grad-photo {
-      max-height: 300px;  /* smaller cap on mobile */
+        max-height: 400px;  /* smaller cap on mobile */
     }
 
     .degree-photo {
-      max-height: 150px;  /* smaller cap on mobile */
+        max-height: 180px;  /* smaller cap on mobile */
     }
-}
-
-.grad-photo,
-.degree-photo {
-  border-radius: 12px !important; /* bigger than Bootstrap's default */
-  overflow: hidden;               /* clip corners */
-  display: block;                 /* prevent inline weirdness */
-}
-
-@media (max-width: 767px) {
+    
     h1 {
-      font-size: 2.2rem;   /* more reasonable for mobile */
+        font-size: 2.2rem;   /* more reasonable for mobile */
     }
-  
+    
     h3 {
-      font-size: 1.5rem;   /* slightly smaller */
+        font-size: 1.5rem;   /* slightly smaller */
     }
-  
+    
     p.lead {
-      font-size: 1rem;     /* shrink long intro paragraph */
-      line-height: 1.4;
+        font-size: 1rem;     /* shrink long intro paragraph */
+        line-height: 1.4;
     }
 }
 
@@ -205,5 +201,8 @@ li a:hover {
     z-index: 5; /* higher than stretched-link */
 }
 
-
-
+/* Added to ensure proper image display */
+.education-section .row img {
+    display: block;
+    margin: 0 auto;
+}
