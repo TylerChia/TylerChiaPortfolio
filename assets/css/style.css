@@ -155,7 +155,7 @@ li a:hover {
     max-height: 450px;   /* consistent cap on desktop */
     width: "auto";         /* take up container width */
     object-fit: contain; /* keep proportions, no stretching */
-    border-radius: 20px !important;  /* always rounded - added !important */
+    border-radius: 15px !important;  /* always rounded - added !important */
 }
 
 /* Degree thumbnails (desktop + mobile) */
@@ -163,23 +163,25 @@ li a:hover {
     max-height: 220px;   /* consistent cap on desktop */
     width: "auto";         /* fill available width */
     object-fit: contain; /* no stretching */
-    border-radius: 20px !important;  /* always rounded - added !important */
+    border-radius: 15px !important;  /* always rounded - added !important */
 }
 
 /* Mobile adjustments */
 @media (max-width: 767px) {
     .card img {
         max-height: 180px;   /* shrink images on mobile */
-        width: 100%;
+        width: "auto";
         object-fit: contain;
     }
 
     .grad-photo {
         max-height: 400px;  /* smaller cap on mobile */
+        border-radius: 15px 
     }
 
     .degree-photo {
         max-height: 180px;  /* smaller cap on mobile */
+        border-radius: 15px 
     }
     
     h1 {
