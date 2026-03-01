@@ -226,26 +226,59 @@ li a:hover {
     flex-wrap: wrap;
     justify-content: center; /* centers the icons under the title */
     gap: 12px;
+    padding-bottom: 10px;
 }
 
 .tech-icon {
-    width: 60px; 
+    width: 60px;
     height: 60px;
-    display: inline-flex; 
-    align-items: center; 
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
     margin: 6px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.tech-icon i { 
+.tech-icon:hover {
+    animation: iconBounce 0.5s ease;
+}
+
+.tech-icon::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    color: #4dd0e1;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.tech-icon:hover::after {
+    opacity: 1;
+}
+
+@keyframes iconBounce {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.3) translateY(-4px); }
+    70%  { transform: scale(1.15) translateY(-1px); }
+    100% { transform: scale(1.2); }
+}
+
+.tech-icon i {
     font-size: 42px;
     line-height: 1;
 }
 
-.tech-icon img { 
-    max-height: 40px;  
-    width: auto; 
-    display: block; 
+.tech-icon img {
+    max-height: 40px;
+    width: auto;
+    display: block;
 }
 
 /* FIXED: Image rounding issue */
@@ -335,89 +368,146 @@ li a:hover {
     color: #4dd0e1 !important;
 }
 
-/* Sticky sidebar jump links */
-.jump-sidebar {
-    position: fixed;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 40;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    max-height: 70vh;
-    overflow-y: auto;
-}
-
-.jump-sidebar a {
-    display: block;
-    padding: 5px 10px;
-    color: #5a8a87;
-    text-decoration: none;
-    font-size: 0.75rem;
-    border-left: 2px solid transparent;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-}
-
-.jump-sidebar a:hover {
-    color: #4dd0e1 !important;
-    border-left-color: #4dd0e1;
-}
-
-.jump-sidebar a.active {
-    color: #00bfa5 !important;
-    border-left-color: #00bfa5;
-    font-weight: 600;
-}
-
-/* Mobile: convert sidebar to horizontal bottom bar */
-@media (max-width: 1199px) {
-    .jump-sidebar {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: auto;
-        transform: none;
-        flex-direction: row;
-        gap: 0;
-        max-height: none;
-        overflow-x: auto;
-        overflow-y: hidden;
-        background: rgba(13, 27, 30, 0.95);
-        border-top: 1px solid #26a69a;
-        padding: 0 60px 0 8px;
-        z-index: 9998;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .jump-sidebar a {
-        border-left: none;
-        border-bottom: 2px solid transparent;
-        padding: 10px 12px;
-        font-size: 0.7rem;
-    }
-
-    .jump-sidebar a:hover {
-        border-left-color: transparent;
-        border-bottom-color: #4dd0e1;
-    }
-
-    .jump-sidebar a.active {
-        border-left-color: transparent;
-        border-bottom-color: #00bfa5;
-    }
-}
-
-/* Move back-to-top button above bottom bar on mobile */
-@media (max-width: 1199px) {
-    #backToTop {
-        bottom: 46px !important;
-    }
-}
-
 /* Offset anchor targets so they don't hide behind the sticky navbar */
 .jump-target {
     scroll-margin-top: 80px;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active img {
+    transform: scale(1);
+}
+
+/* Make lightbox-eligible images show pointer */
+.container img.lightbox-ready {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contact Page */
+.contact-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.contact-hero-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #26a69a, #00bfa5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(38, 166, 154, 0.4);
+    animation: heroPulse 3s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(38, 166, 154, 0.4); }
+    50%      { box-shadow: 0 4px 35px rgba(38, 166, 154, 0.7); }
+}
+
+.contact-subtitle {
+    max-width: 520px;
+    margin: 0 auto;
+    color: #80cbc4;
+    font-size: 1.05rem;
+}
+
+.contact-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.contact-card {
+    background: #102a2c;
+    border-radius: 16px;
+    padding: 32px 20px;
+    text-align: center;
+    border: 1px solid rgba(38, 166, 154, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(0, 191, 165, 0.25);
+    border-color: #26a69a;
+}
+
+.contact-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-card-icon {
+    transform: scale(1.1);
+}
+
+.contact-card h5 {
+    color: #e0f2f1;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.contact-card p {
+    color: #5a8a87;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .contact-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-hero {
+        padding: 40px 16px 24px;
+    }
 }

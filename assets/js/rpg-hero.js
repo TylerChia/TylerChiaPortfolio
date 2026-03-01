@@ -531,16 +531,16 @@
       ctx.fillRect(bx + bw - 21, winY + 3, 4, 3);
 
       // Building name sign
-      ctx.fillStyle = C.signBoard;
-      var nameW = ctx.measureText(b.name).width + 12;
+      ctx.font = "bold 10px 'Segoe UI', sans-serif";
+      ctx.textAlign = "center";
+      var nameW = ctx.measureText(b.name).width + 14;
       var signX = bx + bw / 2 - nameW / 2;
+      ctx.fillStyle = C.signBoard;
       ctx.fillRect(signX, by - 20, nameW, 14);
       ctx.strokeStyle = C.signBorder;
       ctx.lineWidth = 1;
       ctx.strokeRect(signX, by - 20, nameW, 14);
       ctx.fillStyle = C.textDark;
-      ctx.font = "bold 10px 'Segoe UI', sans-serif";
-      ctx.textAlign = "center";
       ctx.fillText(b.name, bx + bw / 2, by - 10);
     });
 

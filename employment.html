@@ -26,7 +26,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html"> <i class="fas fa-home"></i> Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="employment.html"> <i class="fa-solid fa-briefcase"></i> Employment</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-briefcase"></i> Employment</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#ml-engineer">ML Engineer</a></li>
+              <li><a class="dropdown-item" href="#junior-ds">Junior Data Scientist</a></li>
+              <li><a class="dropdown-item" href="#ds-intern">Data Science Intern</a></li>
+              <li><a class="dropdown-item" href="#nsf-fellow">NSF Fellowship</a></li>
+              <li><a class="dropdown-item" href="#ucsb-baseball">UCSB Baseball</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="projects.html"> <i class="fas fa-project-diagram"></i> Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="research.html"> <i class="fa-solid fa-flask"></i> Research</a></li>
           <li class="nav-item"><a class="nav-link" href="gis_work.html"> <i class="fa-solid fa-map"></i> GIS Work</a></li>
@@ -641,42 +650,8 @@
     </div>
 </div>
 
-<!-- Sticky sidebar jump links -->
-<nav class="jump-sidebar" id="jumpSidebar">
-    <a href="#ml-engineer">ML Engineer</a>
-    <a href="#junior-ds">Junior Data Scientist</a>
-    <a href="#ds-intern">Data Science Intern</a>
-    <a href="#nsf-fellow">NSF Fellowship</a>
-    <a href="#ucsb-baseball">UCSB Baseball</a>
-</nav>
-
 <hr style="border-color:#26a69a; margin:40px 0;">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var links = document.querySelectorAll("#jumpSidebar a");
-    var targets = [];
-    links.forEach(function(link) {
-        var id = link.getAttribute("href").substring(1);
-        var el = document.getElementById(id);
-        if (el) targets.push({ link: link, el: el });
-    });
-
-    function updateActive() {
-        var scrollY = window.scrollY + 120;
-        var current = null;
-        targets.forEach(function(t) {
-            if (t.el.offsetTop <= scrollY) current = t;
-        });
-        links.forEach(function(l) { l.classList.remove("active"); });
-        if (current) current.link.classList.add("active");
-    }
-
-    window.addEventListener("scroll", updateActive, { passive: true });
-    updateActive();
-});
-</script>
 
 <!-- Footer -->
 <footer class="site-footer">
@@ -693,5 +668,6 @@ document.addEventListener("DOMContentLoaded", function() {
          font-size:20px; cursor:pointer; display:flex; align-items:center; justify-content:center;
          padding:0; box-shadow:0 3px 10px rgba(0,0,0,0.5);">&#9650;</button>
 
+<script src="assets/js/lightbox.js"></script>
 </body>
 </html>
