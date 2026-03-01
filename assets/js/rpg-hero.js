@@ -68,11 +68,16 @@
 
   // Buildings
   var buildings = [
-    { name: "Employment", col: 3,  row: 7,  w: 6, h: 5, doorOff: 2, href: "employment.html" },
-    { name: "Research",   col: 10, row: 3,  w: 6, h: 5, doorOff: 2, href: "research.html" },
-    { name: "GIS Work",   col: 24, row: 3,  w: 6, h: 5, doorOff: 2, href: "gis_work.html" },
-    { name: "Contact",    col: 31, row: 7,  w: 6, h: 5, doorOff: 2, href: "contact.html" },
-    { name: "Projects",   col: 17, row: 14, w: 6, h: 5, doorOff: 2, href: "projects.html" }
+    { name: "Employment", col: 3,  row: 7,  w: 6, h: 5, doorOff: 2, href: "employment.html",
+      desc: "ML Engineer, Data Scientist,", desc2: "NSF Fellow, UCSB Baseball", icon: "briefcase" },
+    { name: "Research",   col: 10, row: 3,  w: 6, h: 5, doorOff: 2, href: "research.html",
+      desc: "Published papers and academic", desc2: "research in data science", icon: "flask" },
+    { name: "GIS Work",   col: 24, row: 3,  w: 6, h: 5, doorOff: 2, href: "gis_work.html",
+      desc: "Geospatial analysis, mapping,", desc2: "and spatial data projects", icon: "map" },
+    { name: "Contact",    col: 31, row: 7,  w: 6, h: 5, doorOff: 2, href: "contact.html",
+      desc: "Get in touch via LinkedIn,", desc2: "GitHub, or email", icon: "mail" },
+    { name: "Projects",   col: 17, row: 14, w: 6, h: 5, doorOff: 2, href: "projects.html",
+      desc: "ML models, web apps, APIs,", desc2: "and data visualizations", icon: "code" }
   ];
 
   // Tile types: 0=grass, 1=path, 2=tree, 3=wall, 4=door, 5=tallGrass, 6=fence
@@ -428,6 +433,83 @@
     ctx.fillRect(fx, fy, 2, 2);
   }
 
+  function drawPreviewIcon(x, y, s, type) {
+    var p = s / 8; // pixel unit
+    if (type === "briefcase") {
+      // Briefcase
+      ctx.fillStyle = "#5a4020";
+      ctx.fillRect(x + p * 1, y + p * 3, p * 6, p * 4);
+      ctx.fillStyle = "#7a5830";
+      ctx.fillRect(x + p * 1, y + p * 3, p * 6, p * 2);
+      ctx.fillStyle = "#5a4020";
+      ctx.fillRect(x + p * 3, y + p * 1, p * 2, p * 2);
+      // Handle
+      ctx.fillStyle = "#402810";
+      ctx.fillRect(x + p * 2, y + p * 1, p * 1, p * 1);
+      ctx.fillRect(x + p * 5, y + p * 1, p * 1, p * 1);
+      // Clasp
+      ctx.fillStyle = "#d4a020";
+      ctx.fillRect(x + p * 3.5, y + p * 4, p * 1, p * 1);
+    } else if (type === "flask") {
+      // Flask / beaker
+      ctx.fillStyle = "#a0a0a0";
+      ctx.fillRect(x + p * 3, y + p * 1, p * 2, p * 2);
+      ctx.fillStyle = "#c0c0c0";
+      ctx.fillRect(x + p * 2, y + p * 0.5, p * 4, p * 1);
+      ctx.fillStyle = "#50b0d0";
+      ctx.fillRect(x + p * 2, y + p * 3, p * 4, p * 4);
+      ctx.fillRect(x + p * 1, y + p * 5, p * 6, p * 2);
+      // Bubbles
+      ctx.fillStyle = "#80d8f0";
+      ctx.fillRect(x + p * 3, y + p * 4, p * 1, p * 1);
+      ctx.fillRect(x + p * 4, y + p * 5.5, p * 1, p * 1);
+    } else if (type === "map") {
+      // Folded map
+      ctx.fillStyle = "#e8d8a0";
+      ctx.fillRect(x + p * 1, y + p * 1, p * 6, p * 6);
+      ctx.fillStyle = "#c8b880";
+      ctx.fillRect(x + p * 3, y + p * 1, p * 1, p * 6);
+      // Map lines
+      ctx.fillStyle = "#c83830";
+      ctx.fillRect(x + p * 1.5, y + p * 2, p * 1.5, p * 0.5);
+      ctx.fillRect(x + p * 1.5, y + p * 3.5, p * 2, p * 0.5);
+      // Map pin
+      ctx.fillStyle = "#c83830";
+      ctx.fillRect(x + p * 5, y + p * 3, p * 1, p * 1.5);
+      ctx.fillRect(x + p * 4.5, y + p * 2.5, p * 2, p * 1);
+    } else if (type === "mail") {
+      // Envelope
+      ctx.fillStyle = "#e0e0d8";
+      ctx.fillRect(x + p * 1, y + p * 2, p * 6, p * 4);
+      ctx.fillStyle = "#c0c0b8";
+      // Flap triangles (simplified)
+      ctx.fillRect(x + p * 1, y + p * 2, p * 1, p * 1);
+      ctx.fillRect(x + p * 6, y + p * 2, p * 1, p * 1);
+      ctx.fillRect(x + p * 2, y + p * 3, p * 1, p * 1);
+      ctx.fillRect(x + p * 5, y + p * 3, p * 1, p * 1);
+      ctx.fillRect(x + p * 3, y + p * 4, p * 2, p * 1);
+      // Seal
+      ctx.fillStyle = "#c83830";
+      ctx.fillRect(x + p * 3.5, y + p * 4, p * 1, p * 1);
+    } else if (type === "code") {
+      // Code brackets < / >
+      ctx.fillStyle = "#3060b0";
+      // Left bracket <
+      ctx.fillRect(x + p * 2, y + p * 3.5, p * 1, p * 1);
+      ctx.fillRect(x + p * 1, y + p * 4.5, p * 1, p * 1);
+      ctx.fillRect(x + p * 2, y + p * 5.5, p * 1, p * 1);
+      // Right bracket >
+      ctx.fillRect(x + p * 5, y + p * 3.5, p * 1, p * 1);
+      ctx.fillRect(x + p * 6, y + p * 4.5, p * 1, p * 1);
+      ctx.fillRect(x + p * 5, y + p * 5.5, p * 1, p * 1);
+      // Slash /
+      ctx.fillStyle = "#40a040";
+      ctx.fillRect(x + p * 4, y + p * 2, p * 1, p * 1);
+      ctx.fillRect(x + p * 3.5, y + p * 3.5, p * 1, p * 1);
+      ctx.fillRect(x + p * 3, y + p * 5, p * 1, p * 1);
+    }
+  }
+
   function draw() {
     // Sky-colored background
     ctx.fillStyle = "#48a848";
@@ -569,34 +651,61 @@
     // Draw player
     drawPlayer();
 
-    // Nearby building prompt (Pokemon dialog box style)
+    // Nearby building preview panel (Pokemon menu style)
     var nb = nearbyBuilding();
     if (nb) {
-      var promptText = "Press SPACE to enter " + nb.name;
-      ctx.font = "bold 13px 'Segoe UI', sans-serif";
-      var pw = ctx.measureText(promptText).width + 30;
+      var pw = 240, ph = 90;
       var px = W / 2 - pw / 2;
-      var py = H - 44;
-      // Dialog box
+      var py = H - ph - 10;
+
+      // Outer box
       ctx.fillStyle = C.wallWhite;
-      ctx.fillRect(px, py, pw, 32);
+      ctx.fillRect(px, py, pw, ph);
       ctx.strokeStyle = "#404040";
-      ctx.lineWidth = 2;
-      ctx.strokeRect(px, py, pw, 32);
-      // Inner border
+      ctx.lineWidth = 2.5;
+      ctx.strokeRect(px, py, pw, ph);
+      // Inner border (double-border Pokemon style)
       ctx.strokeStyle = "#a0a098";
       ctx.lineWidth = 1;
-      ctx.strokeRect(px + 3, py + 3, pw - 6, 26);
-      // Text
+      ctx.strokeRect(px + 3, py + 3, pw - 6, ph - 6);
+
+      // Icon area
+      var iconX = px + 16, iconY = py + 14;
+      var iconSize = 32;
+      // Icon background circle
+      ctx.fillStyle = "#e8f5e9";
+      ctx.fillRect(iconX - 2, iconY - 2, iconSize + 4, iconSize + 4);
+      ctx.strokeStyle = "#a0a098";
+      ctx.lineWidth = 1;
+      ctx.strokeRect(iconX - 2, iconY - 2, iconSize + 4, iconSize + 4);
+
+      // Draw pixel icon based on type
+      drawPreviewIcon(iconX, iconY, iconSize, nb.icon);
+
+      // Building name
       ctx.fillStyle = C.textDark;
+      ctx.font = "bold 14px 'Segoe UI', sans-serif";
+      ctx.textAlign = "left";
+      ctx.fillText(nb.name, iconX + iconSize + 12, iconY + 10);
+
+      // Description lines
+      ctx.font = "11px 'Segoe UI', sans-serif";
+      ctx.fillStyle = "#606060";
+      ctx.fillText(nb.desc, iconX + iconSize + 12, iconY + 24);
+      ctx.fillText(nb.desc2, iconX + iconSize + 12, iconY + 37);
+
+      // "SPACE to enter" prompt at bottom
+      ctx.font = "bold 10px 'Segoe UI', sans-serif";
+      ctx.fillStyle = "#808080";
       ctx.textAlign = "center";
-      ctx.fillText(promptText, W / 2, py + 21);
-      // Arrow indicator
+      ctx.fillText("[ SPACE ] to enter", px + pw / 2, py + ph - 10);
+
+      // Bouncing arrow indicator
       var arrowBob = Math.sin(animTick * 0.1) * 2;
       ctx.fillStyle = C.textDark;
-      ctx.fillRect(px + pw - 16, py + 20 + arrowBob, 6, 3);
-      ctx.fillRect(px + pw - 15, py + 23 + arrowBob, 4, 2);
-      ctx.fillRect(px + pw - 14, py + 25 + arrowBob, 2, 1);
+      ctx.fillRect(px + pw - 16, py + ph - 18 + arrowBob, 6, 3);
+      ctx.fillRect(px + pw - 15, py + ph - 15 + arrowBob, 4, 2);
+      ctx.fillRect(px + pw - 14, py + ph - 13 + arrowBob, 2, 1);
     }
   }
 
