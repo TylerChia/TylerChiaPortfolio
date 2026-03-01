@@ -6,6 +6,10 @@ body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -207,4 +211,91 @@ li a:hover {
 .education-section .row img {
     display: block;
     margin: 0 auto;
+}
+
+/* Sticky sidebar jump links */
+.jump-sidebar {
+    position: fixed;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.jump-sidebar a {
+    display: block;
+    padding: 5px 10px;
+    color: #5a8a87;
+    text-decoration: none;
+    font-size: 0.75rem;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.jump-sidebar a:hover {
+    color: #4dd0e1 !important;
+    border-left-color: #4dd0e1;
+}
+
+.jump-sidebar a.active {
+    color: #00bfa5 !important;
+    border-left-color: #00bfa5;
+    font-weight: 600;
+}
+
+/* Mobile: convert sidebar to horizontal bottom bar */
+@media (max-width: 1199px) {
+    .jump-sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: none;
+        flex-direction: row;
+        gap: 0;
+        max-height: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background: rgba(13, 27, 30, 0.95);
+        border-top: 1px solid #26a69a;
+        padding: 0 60px 0 8px;
+        z-index: 9998;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .jump-sidebar a {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        padding: 10px 12px;
+        font-size: 0.7rem;
+    }
+
+    .jump-sidebar a:hover {
+        border-left-color: transparent;
+        border-bottom-color: #4dd0e1;
+    }
+
+    .jump-sidebar a.active {
+        border-left-color: transparent;
+        border-bottom-color: #00bfa5;
+    }
+}
+
+/* Move back-to-top button above bottom bar on mobile */
+@media (max-width: 1199px) {
+    #backToTop {
+        bottom: 46px !important;
+    }
+}
+
+/* Offset anchor targets so they don't hide behind the sticky navbar */
+.jump-target {
+    scroll-margin-top: 80px;
 }

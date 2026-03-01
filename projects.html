@@ -44,7 +44,7 @@
     <div class="row gy-3">
 
         <!-- AI Legal Contract Analyzer -->
-        <div class="col-12">
+        <div id="legal-agent" class="col-12 jump-target">
           <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
             <!-- This invisible anchor makes the whole card clickable -->
             <a href="https://tylerchia.github.io/legal_agent_langgraph/"
@@ -76,7 +76,7 @@
         </div>
 
         <!-- RAG Textbook Assistant -->
-        <div class="col-12">
+        <div id="rag-textbook" class="col-12 jump-target">
           <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
             <!-- This invisible anchor makes the whole card clickable -->
             <a href="assets/images/project_imgs/texbook_rag.png"
@@ -104,7 +104,7 @@
         </div>
 
         <!-- isolation forest -->
-        <div class="col-12">
+        <div id="anomaly-detection" class="col-12 jump-target">
           <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
             <!-- This invisible anchor makes the whole card clickable -->
             <a href="https://tylerchia.github.io/isoforest_exercise/"
@@ -132,7 +132,7 @@
         </div>
 
         <!-- NLP finetuning -->
-        <div class="col-12">
+        <div id="nlp-adversarial" class="col-12 jump-target">
           <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
             <!-- This invisible anchor makes the whole card clickable -->
             <a href="assets/documents/project_docs/NLP_FinalProject.pdf"
@@ -160,7 +160,7 @@
         </div>
 
         <!-- Trump Biden -->
-        <div class="col-12">
+        <div id="trump-biden" class="col-12 jump-target">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
               <!-- This invisible anchor makes the whole card clickable -->
               <a href="assets/documents/project_docs/trump_or_biden.html"
@@ -190,7 +190,7 @@
         </div>
 
         <!-- COVID Forecast -->
-        <div class="col-12">
+        <div id="covid-forecast" class="col-12 jump-target">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
               <!-- This invisible anchor makes the whole card clickable -->
               <a href="assets/documents/project_docs/197A Final Paper copy.pdf"
@@ -229,7 +229,7 @@
 
 
         <!-- NBA Draft -->
-        <div class="col-12">
+        <div id="nba-draft" class="col-12 jump-target">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
               <!-- This invisible anchor makes the whole card clickable -->
               <a href="https://tylerchia.github.io/nbadraft2021/"
@@ -257,7 +257,7 @@
 
         
         <!-- Election -->
-        <div class="col-12">
+        <div id="election-2016" class="col-12 jump-target">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
               <!-- This invisible anchor makes the whole card clickable -->
               <a href="https://tylerchia.github.io/2016Election/"
@@ -296,7 +296,7 @@
 
 
         <!-- Disney -->
-        <div class="col-12">
+        <div id="disney-pricing" class="col-12 jump-target">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
               <!-- This invisible anchor makes the whole card clickable -->
               <a href="https://tylerchia.github.io/disneyworld_ticket_elasticity/"
@@ -322,7 +322,7 @@
 
 
         <!-- Spotify -->
-        <div class="col-12">
+        <div id="spotify" class="col-12 jump-target">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
               <!-- This invisible anchor makes the whole card clickable -->
               <a href="https://tylerchia.github.io/dsclub-spotify-recommender/"
@@ -348,7 +348,7 @@
 
 
         <!-- Solar Panel -->
-        <div class="col-12">
+        <div id="solar-panels" class="col-12 jump-target">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
               <!-- This invisible anchor makes the whole card clickable -->
               <a href="https://tylerchia.github.io/Solar-Panel-Proposal/"
@@ -373,7 +373,7 @@
         </div>
 
         <!-- UC Datathon -->
-        <div class="col-12">
+        <div id="uc-datathon" class="col-12 jump-target">
             <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
               <!-- This invisible anchor makes the whole card clickable -->
               <a href="https://deepnote.com/workspace/joanne%20kim-4da6587a-415c-4db6-b2c0-47c2fa6de0e1/project/Loadshedding-Project-f31d9b1e-b811-4010-8d3e-ce8e17f35adb/notebook/datathonproject-48af38a70ffe43bfb8943191dadb7c11?utm_content=f31d9b1e-b811-4010-8d3e-ce8e17f35adb"
@@ -397,8 +397,59 @@
             </div>
         </div>
 
+    </div> <!-- close row gy-3 -->
+</div> <!-- close container -->
+
+<!-- Sticky sidebar jump links -->
+<nav class="jump-sidebar" id="jumpSidebar">
+    <a href="#legal-agent">Legal Agent</a>
+    <a href="#rag-textbook">RAG Assistant</a>
+    <a href="#anomaly-detection">Anomaly Detection</a>
+    <a href="#nlp-adversarial">NLP Adversarial</a>
+    <a href="#trump-biden">Trump/Biden</a>
+    <a href="#covid-forecast">COVID Forecast</a>
+    <a href="#nba-draft">NBA Draft</a>
+    <a href="#election-2016">2016 Election</a>
+    <a href="#disney-pricing">Disney Pricing</a>
+    <a href="#spotify">Spotify</a>
+    <a href="#solar-panels">Solar Panels</a>
+    <a href="#uc-datathon">UC Datathon</a>
+</nav>
+
 <hr style="border-color:#26a69a; margin:40px 0;">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var links = document.querySelectorAll("#jumpSidebar a");
+    var targets = [];
+    links.forEach(function(link) {
+        var id = link.getAttribute("href").substring(1);
+        var el = document.getElementById(id);
+        if (el) targets.push({ link: link, el: el });
+    });
+
+    function updateActive() {
+        var scrollY = window.scrollY + 120;
+        var current = null;
+        targets.forEach(function(t) {
+            if (t.el.offsetTop <= scrollY) current = t;
+        });
+        links.forEach(function(l) { l.classList.remove("active"); });
+        if (current) current.link.classList.add("active");
+    }
+
+    window.addEventListener("scroll", updateActive, { passive: true });
+    updateActive();
+});
+</script>
+
+<!-- Back to Top button -->
+<button id="backToTop" onclick="document.documentElement.scrollTop=0;document.body.scrollTop=0;" aria-label="Back to top"
+  style="position:fixed; bottom:24px; right:24px; z-index:99999; width:46px; height:46px;
+         border-radius:50%; border:2px solid #26a69a; background:#26a69a; color:#fff;
+         font-size:20px; cursor:pointer; display:flex; align-items:center; justify-content:center;
+         padding:0; box-shadow:0 3px 10px rgba(0,0,0,0.5);">&#9650;</button>
 
 </body>
 </html>

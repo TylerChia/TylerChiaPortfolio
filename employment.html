@@ -40,7 +40,7 @@
     <p>All cards are clickable for more information, except those related to work completed at Reyes Coca-Cola Bottling.</p>
     <hr style="border-color:#26a69a; margin:40px 0;">
 
-    <h3 class="mb-3">ML Engineer: Reyes Coca Cola Bottling</h3>
+    <h3 id="ml-engineer" class="jump-target mb-3">ML Engineer: Reyes Coca Cola Bottling</h3>
     <div class="row gy-3">
         <!-- Merch Routing -->
         <div class="col-12">
@@ -230,7 +230,7 @@
     </div>
 
     <!-- Junior Data Scientist: Reyes Coca Cola Bottling -->
-    <h3 class="mt-5 mb-3">Junior Data Scientist: Reyes Coca Cola Bottling</h3>
+    <h3 id="junior-ds" class="jump-target mt-5 mb-3">Junior Data Scientist: Reyes Coca Cola Bottling</h3>
     <div class="row gy-3">
 
         <!-- Image Rec Coaching -->
@@ -441,7 +441,7 @@
     </div>
     
     <!-- Data Science Intern: Reyes Coca Cola Bottling -->
-    <h3 class="mt-5 mb-3">Data Science Intern: Reyes Coca Cola Bottling</h3>
+    <h3 id="ds-intern" class="jump-target mt-5 mb-3">Data Science Intern: Reyes Coca Cola Bottling</h3>
     <div class="row gy-3">
         <!-- Survey Routing-->
         <div class="col-12">
@@ -511,7 +511,7 @@
     </div>
 
     <!-- DS Fellow -->
-    <h3 class="mt-5 mb-3">NSF Data Science Fellowship</h3>
+    <h3 id="nsf-fellow" class="jump-target mt-5 mb-3">NSF Data Science Fellowship</h3>
     <div class="row gy-3">
         <!-- Card 1 -->
         <div class="col-12">
@@ -543,7 +543,7 @@
     </div>
 
     <!-- UCSB Data Analytics -->
-    <h3 class="mt-5 mb-3">Data Analytics Intern: UCSB Baseball</h3>
+    <h3 id="ucsb-baseball" class="jump-target mt-5 mb-3">Data Analytics Intern: UCSB Baseball</h3>
     <div class="row gy-3">
         <!-- Player Profile -->
         <div class="col-12">
@@ -639,8 +639,49 @@
     </div>
 </div>
 
+<!-- Sticky sidebar jump links -->
+<nav class="jump-sidebar" id="jumpSidebar">
+    <a href="#ml-engineer">ML Engineer</a>
+    <a href="#junior-ds">Junior Data Scientist</a>
+    <a href="#ds-intern">Data Science Intern</a>
+    <a href="#nsf-fellow">NSF Fellowship</a>
+    <a href="#ucsb-baseball">UCSB Baseball</a>
+</nav>
+
 <hr style="border-color:#26a69a; margin:40px 0;">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var links = document.querySelectorAll("#jumpSidebar a");
+    var targets = [];
+    links.forEach(function(link) {
+        var id = link.getAttribute("href").substring(1);
+        var el = document.getElementById(id);
+        if (el) targets.push({ link: link, el: el });
+    });
+
+    function updateActive() {
+        var scrollY = window.scrollY + 120;
+        var current = null;
+        targets.forEach(function(t) {
+            if (t.el.offsetTop <= scrollY) current = t;
+        });
+        links.forEach(function(l) { l.classList.remove("active"); });
+        if (current) current.link.classList.add("active");
+    }
+
+    window.addEventListener("scroll", updateActive, { passive: true });
+    updateActive();
+});
+</script>
+
+<!-- Back to Top button -->
+<button id="backToTop" onclick="document.documentElement.scrollTop=0;document.body.scrollTop=0;" aria-label="Back to top"
+  style="position:fixed; bottom:24px; right:24px; z-index:99999; width:46px; height:46px;
+         border-radius:50%; border:2px solid #26a69a; background:#26a69a; color:#fff;
+         font-size:20px; cursor:pointer; display:flex; align-items:center; justify-content:center;
+         padding:0; box-shadow:0 3px 10px rgba(0,0,0,0.5);">&#9650;</button>
 
 </body>
 </html>
