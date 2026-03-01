@@ -24,6 +24,11 @@ html, body {
     border-bottom: 2px solid #26a69a;
 }
 
+.nav-link.active {
+    color: #4dd0e1 !important;
+    border-bottom: 2px solid #4dd0e1;
+}
+
 /* Headings */
 h1, h2, h3, h4 {
     color: #4dd0e1; /* bright teal */
@@ -69,6 +74,98 @@ a:hover, .nav-link:hover {
     white-space: nowrap;
 }
 
+/* RPG Hero Canvas */
+.rpg-wrapper {
+    text-align: center;
+    margin: 0 auto 20px;
+    max-width: 800px;
+    padding: 0 16px;
+}
+
+#rpgCanvas {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 2px solid #26a69a;
+    border-radius: 8px;
+    image-rendering: pixelated;
+    display: block;
+    margin: 0 auto;
+}
+
+.rpg-instructions {
+    color: #5a8a87;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+/* Mobile touch d-pad */
+.rpg-touch-controls {
+    display: none;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px;
+    gap: 4px;
+    justify-content: center;
+    margin-top: 12px;
+    touch-action: manipulation;
+}
+
+.rpg-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid #26a69a;
+    background: #102a2c;
+    color: #4dd0e1;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.rpg-btn:active {
+    background: #26a69a;
+    color: #0d1b1e;
+}
+
+.rpg-up    { grid-column: 2; grid-row: 1; }
+.rpg-left  { grid-column: 1; grid-row: 2; }
+.rpg-action { grid-column: 2; grid-row: 2; }
+.rpg-right { grid-column: 3; grid-row: 2; }
+.rpg-down  { grid-column: 2; grid-row: 3; }
+
+/* Show touch controls on touch devices */
+@media (pointer: coarse) {
+    .rpg-touch-controls {
+        display: grid;
+        grid-template-rows: 50px 50px 50px;
+    }
+}
+
+/* Full-screen game page layout */
+.rpg-fullscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 56px);
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.rpg-fullscreen #rpgCanvas {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    border: 2px solid #26a69a;
+    border-radius: 8px;
+    image-rendering: pixelated;
+    display: block;
+}
+
 /* Make bullet points visible on dark background */
 ul li {
     color: #e0f2f1;  /* light teal/white for contrast */
@@ -108,6 +205,11 @@ li a:hover {
 .card a:not(.stretched-link) {
     position: relative;
     z-index: 1;
+}
+
+/* Only show pointer cursor on cards that are actually clickable */
+.card:has(.stretched-link) {
+    cursor: pointer;
 }
 
 .tech-section {
@@ -157,7 +259,7 @@ li a:hover {
 /* Graduation photos (desktop + mobile) */
 .grad-photo {
     max-height: 450px;   /* consistent cap on desktop */
-    width: "auto";         /* take up container width */
+    width: auto;         /* take up container width */
     object-fit: contain; /* keep proportions, no stretching */
     border-radius: 15px !important;  /* always rounded - added !important */
 }
@@ -165,7 +267,7 @@ li a:hover {
 /* Degree thumbnails (desktop + mobile) */
 .degree-photo {
     max-height: 220px;   /* consistent cap on desktop */
-    width: "auto";         /* fill available width */
+    width: auto;         /* fill available width */
     object-fit: contain; /* no stretching */
     border-radius: 15px !important;  /* always rounded - added !important */
 }
@@ -174,7 +276,7 @@ li a:hover {
 @media (max-width: 767px) {
     .card img {
         max-height: 180px;   /* shrink images on mobile */
-        width: "auto";
+        width: auto;
         object-fit: contain;
     }
 
@@ -211,6 +313,26 @@ li a:hover {
 .education-section .row img {
     display: block;
     margin: 0 auto;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 24px 16px;
+    color: #5a8a87;
+    font-size: 0.85rem;
+    border-top: 1px solid #26a69a;
+    margin-top: 40px;
+}
+
+.site-footer a {
+    color: #80cbc4;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #4dd0e1 !important;
 }
 
 /* Sticky sidebar jump links */
