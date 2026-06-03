@@ -30,6 +30,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-project-diagram"></i> Projects</a>
             <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#summonrun">SummonRun (iOS App)</a></li>
               <li><a class="dropdown-item" href="#legal-agent">Legal Agent</a></li>
               <li><a class="dropdown-item" href="#rag-textbook">RAG Assistant</a></li>
               <li><a class="dropdown-item" href="#anomaly-detection">Anomaly Detection</a></li>
@@ -60,6 +61,35 @@
 
     <!-- Project Cards -->
     <div class="row gy-3">
+
+        <!-- SummonRun iOS App -->
+        <div id="summonrun" class="col-12 jump-target">
+          <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+            <!-- This invisible anchor makes the whole card clickable -->
+            <a href="https://apps.apple.com/us/app/summonrun/id6762098057"
+               target="_blank" rel="noopener noreferrer"
+               class="stretched-link" aria-label="SummonRun on the App Store"></a>
+
+            <div class="row g-0 align-items-center">
+              <div class="col-md-8 content">
+                  <h4>SummonRun &mdash; iOS Running App <i class="fab fa-apple"></i> <i class="fab fa-react"></i> <i class="fab fa-swift"></i></h4>
+                  <ul>
+                    <li>Designed, built, and shipped a gamified running app on the App Store that pairs with Apple Health and turns each qualifying run into evolution progress for a monthly mythical creature.</li>
+                    <li>Built the full stack solo: React 19 + TypeScript + Vite frontend wrapped in Capacitor for iOS, Supabase (Postgres + Auth + Deno Edge Functions) backend, and custom Swift plugins for HealthKit, Sign in with Apple, StoreKit 2 IAP, APNs push, and local notifications.</li>
+                    <li>Shipped an Apple Watch companion app with complications (Circular, Rectangular, Inline, Corner), an iOS Home Screen widget, in-app camera with creature overlay, and a friend leaderboard ranked by creature progress rather than pace.</li>
+                    <li>Implemented a gacha collection system (25+ secondary creatures across five rarities including a limited Founder Dragon), six animated elemental island habitats with three upgrade tiers each, 31 achievements, and a Creature Codex.</li>
+                    <li>Live on the App Store: <a href="https://apps.apple.com/us/app/summonrun/id6762098057" target="_blank" rel="noopener">apps.apple.com/us/app/summonrun</a>. Landing page: <a href="https://summonrun.com" target="_blank" rel="noopener">summonrun.com</a>.</li>
+                  </ul>
+                <small class="text-muted">April 2026</small>
+              </div>
+              <div class="col-md-4 text-center d-flex align-items-center">
+                <img src="assets/images/project_imgs/summonrun.png"
+                class="img-fluid"
+                style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- AI Legal Contract Analyzer -->
         <div id="legal-agent" class="col-12 jump-target">
