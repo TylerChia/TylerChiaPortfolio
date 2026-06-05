@@ -34,6 +34,7 @@
             <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-project-diagram"></i> Projects</a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="#summonrun">SummonRun (iOS App)</a></li>
+              <li><a class="dropdown-item" href="#collabscanner">CollabScanner (SaaS)</a></li>
               <li><a class="dropdown-item" href="#legal-agent">Legal Agent</a></li>
               <li><a class="dropdown-item" href="#rag-textbook">RAG Assistant</a></li>
               <li><a class="dropdown-item" href="#anomaly-detection">Anomaly Detection</a></li>
@@ -87,6 +88,36 @@
               </div>
               <div class="col-md-4 text-center d-flex align-items-center">
                 <img src="assets/images/project_imgs/summonrun.png"
+                class="img-fluid"
+                style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CollabScanner SaaS -->
+        <div id="collabscanner" class="col-12 jump-target">
+          <div class="card p-3 position-relative" style="cursor:pointer; margin-bottom:20px;">
+            <!-- This invisible anchor makes the whole card clickable -->
+            <a href="https://collabscanner.com"
+               target="_blank" rel="noopener noreferrer"
+               class="stretched-link" aria-label="CollabScanner"></a>
+
+            <div class="row g-0 align-items-center">
+              <div class="col-md-8 content">
+                  <h4>CollabScanner &mdash; AI Influencer Outreach SaaS <i class="fab fa-react"></i> <i class="fab fa-node-js"></i> <i class="fab fa-stripe-s"></i></h4>
+                  <ul>
+                    <li>Designed, built, and shipped a full-stack B2B SaaS that helps marketing teams automatically scan their email inboxes for creator/influencer collaboration requests, extract key details with AI, and manage them through a campaign pipeline.</li>
+                    <li>Built the entire stack solo: React + Vite frontend (Vercel), Node.js + Express backend (Railway), PostgreSQL on Supabase, Supabase Auth, and Stripe subscriptions with metered plan tiers, upgrades/downgrades via Subscription Schedules, and proration.</li>
+                    <li>Integrated the Unipile API for secure read-only Gmail &amp; Outlook OAuth, scanning 30 days of email in paginated batches, then used OpenAI (GPT-4o-mini) to distinguish genuine creator pitches from newsletters, sales emails, and agency spam &mdash; auto-extracting names, social handles, follower counts, niches, rates, and collaboration type.</li>
+                    <li>Engineered team collaboration features: organizations with role-based access, real-time activity feeds over WebSockets, shared campaigns, deliverables, a deadline calendar, follow-up detection, and a per-user drag-and-drop workflow pipeline.</li>
+                    <li>Hardened the product for production: SHA-256 bearer-token sessions, LLM prompt-injection sanitization with output-schema validation, parameterized queries, rate limiting, callback-secret verification, and an 80-test Jest suite.</li>
+                    <li>Live at <a href="https://collabscanner.com" target="_blank" rel="noopener">collabscanner.com</a> (app at <a href="https://app.collabscanner.com" target="_blank" rel="noopener">app.collabscanner.com</a>).</li>
+                  </ul>
+                <small class="text-muted">February 2026</small>
+              </div>
+              <div class="col-md-4 text-center d-flex align-items-center">
+                <img src="assets/images/project_imgs/collabscanner.png"
                 class="img-fluid"
                 style="max-height:250px; width:auto; border-radius:8px; margin:auto;">
               </div>
